@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+.paged {
+    display: flex;
+}
+
+.container {
+    width: 300px;
+    height: 600px;
+    /* background-color: rgba(250, 250, 250, 0.4); */
+    display: flex;
+    flex-wrap: wrap;
+    border: 5px solid #ec008c;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px #ec008c, 0.1rem 0.1rem 10px #13092d;
+
+}
+
+.container div {
+    height: 30px;
+    width: 30px;
+}
+
+.tetro {
+    background-color: black;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 5px;
+    /* box-shadow: 0 0 0 0 #ec008c, 0.1rem 0.1rem 10px #13092d; */
+    background-image: linear-gradient(160deg, #f00, #ec008c);
+    position: relative;
+
+    animation: neon 1s infinite;
+
+}
+
+.tetro:hover {
+    animation: none;
+    box-shadow: 0 0 10px 1px #ec008c, 0.1rem 0.1rem 10px #13092d;
+
+}
+
+.tetro::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    border-radius: 30px;
+    background-image: linear-gradient(170deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    pointer-events: none;
+}
+
+
+.nxtContainer {
+    width: 120px;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    /* background-color: orchid; */
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    justify-content: center;
+    margin-top: 50px;
+
+    border: 5px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px #fff, 0.1rem 0.1rem 10px #13092d;
+}
+
+.nxtContainer div {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+/* Styling the game  */
+
+body {
+    /* background-image: url("./RMB.jpg"); */
+    background-color: #000;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+/* .overlay {
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+width: 100vw;
+height: 100vh;
+background-color: rgba(222, 222, 222, 0.4);
+z-index: 3;
+} */
+
+.heading {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 30px 0 30px 0;
+}
+
+#start-button {
+    width: 160px;
+    margin: auto;
+    margin-top: 20px;
+	 font-size: 1rem;
+	 line-height: 2.5rem;
+	 text-decoration: none;
+	 color: white;
+    -webkit-font-smoothing: antialiased;
+	 -moz-osx-font-smoothing: grayscale;
+	 background-image: linear-gradient(160deg, #f00, #ec008c);
+	 border-radius: 15px;
+	 cursor: pointer;
+	 user-select: none;
+	 box-shadow: 0 0 0 0 #ec008c, 0.5rem 0.5rem 30px #13092d;
+     transition: box-shadow 0.6s;
+     border: none;
+     
+
+    position: relative;
+}
+
+#start-button:hover {
+    box-shadow: 0 0 60px 2px #ec008c, 0.5rem 0.5rem 30px #13092d;
+}
+
+#start-button::after {
+    content: '';
+	 position: absolute;
+	 top: 2px;
+	 right: 2px;
+	 bottom: 2px;
+	 left: 2px;
+	 border-radius: 30px;
+	 background-image: linear-gradient(170deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+	 pointer-events: none;
+}
+
+
+.scoreContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+    padding-top: 50px;
+    color: white;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.7em;
+}
+
+.paging {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    width: 200px;
+    
+}
+
+
+@keyframes neon {
+    from {
+    box-shadow: 0 0 5px 1px #ec008c, 0.1rem 0.1rem 10px #13092d;
+    }
+
+    to {
+    box-shadow: 0 0 10px 2px #ec008c, 0.1rem 0.1rem 10px #13092d;
+    }
+}
+
+
+
+.tetro2 {
+    background-color: black;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 0 0 0 0 #fff, 0.1rem 0.1rem 10px #13092d;
+    background-image: linear-gradient(160deg, #112211, #fff);
+    position: relative;
+
+
+}
+
+.tetro2:hover {
+    animation: none;
+    box-shadow: 0 0 10px 1px #fff, 0.1rem 0.1rem 10px #13092d;
+
+}
+
+.tetro2::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    border-radius: 30px;
+    background-image: linear-gradient(170deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+    pointer-events: none;
+}
+
+
+.triple {
+    position: absolute;
+    width: 800;
+    height: 800;
+    top: 25%;
+    left: 25%;
+    /* background-color: white; */
+    transition: all 1s ease-in;
+    opacity: 1;
+    display: none;
+}
+
+.over {
+    left: 20%;
+    opacity: 0;
+    display: block;
+}
+
